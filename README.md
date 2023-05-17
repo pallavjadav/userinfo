@@ -9,7 +9,8 @@ https://<hostname>/user-api/currentUser
 ```  
 Response
 
-```{
+```
+{
   "firstname": "Pallavkumar",
   "lastname": "Jadav",
   "email": "pallavjadav@gmail.com",
