@@ -1,0 +1,74 @@
+{
+  "name": "userinfo",
+  "version": "0.0.1",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "description": "API Test for user info",
+  "engines": {
+    "node": "^16"
+  },
+  "dependencies": {
+    "@sap/cds": "^6.8",
+    "@sap/audit-logging": "^5",
+
+    "@sap/xsenv": "^3",
+    "@sap/xssec": "^3",
+    "passport": "^0.4.1",
+
+    "debug": "^4.3",
+    "express": "^4"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "requires": {
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        },
+        "[development]": {
+          "strategy": "mock",
+          "users": {
+            "joe": {
+            },
+            "julie": {
+            },
+            "bob": {
+            }
+          }
+        }
+      }
+    }
+  }
+}

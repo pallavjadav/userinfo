@@ -1,0 +1,52 @@
+_schema-version: '3.2'
+ID: userinfo
+version: 0.0.1
+
+parameters:
+  enable-parallel-deployments: true
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install --production
+        - npx -p @sap/cds-dk cds build --production
+
+modules:
+
+  # ------------------ APP ROUTER MODULE -----------------------
+  - name: userinfo-app
+  # ------------------------------------------------------------
+    type: approuter.nodejs
+    path: app
+    build-parameters:
+      ignore:
+        - default-*.json
+        - .env
+        - "*node_modules*"
+        - package-lock.json
+    parameters:
+      memory: 256M
+      disk-quota: 1024M
+    requires:
+      - name: userinfo-uaa
+
+
+resources:
+  # ----------------------- UAA SERVICE ------------------------
+  - name: userinfo-uaa
+  # ------------------------------------------------------------
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+
+
+
+
+
+
+
+
+
