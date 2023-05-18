@@ -1,5 +1,5 @@
 _schema-version: '3.2'
-ID: userinfo
+ID: userinfo-2
 version: 0.0.1
 
 parameters:
@@ -15,7 +15,7 @@ build-parameters:
 modules:
 
   # ------------------ APP ROUTER MODULE -----------------------
-  - name: userinfo-app
+  - name: userinfo-app-2
   # ------------------------------------------------------------
     type: approuter.nodejs
     path: app

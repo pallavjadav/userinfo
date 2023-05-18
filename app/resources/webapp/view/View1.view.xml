@@ -1,0 +1,14 @@
+<mvc:View controllerName="info.user.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:code="sap.ui.codeeditor">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <code:CodeEditor id="codeeditor"
+		type="json"
+	height="300px" />
+        
+        
+        
+        </content>
+    </Page>
+</mvc:View>

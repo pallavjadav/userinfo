@@ -20,7 +20,8 @@
     "oauth2-configuration": {
         "token-validity": 3600,
         "redirect-uris": [
-            "https://*-userinfo-app.cfapps.*.hana.ondemand.com/login/callback"
+            "https://*-userinfo-app.cfapps.*.hana.ondemand.com/login/callback",
+            "https://9b7ff814trial-dev-userinfo-app-2.cfapps.us10-001.hana.ondemand.com/login/callback"
         ]
     }
 }
