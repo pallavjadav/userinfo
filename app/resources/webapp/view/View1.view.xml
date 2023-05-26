@@ -6,6 +6,8 @@
         <code:CodeEditor id="codeeditor"
 		type="json"
 	height="300px" />
+
+    <Button text="Get User" press="getcurrentuser" />
         
         
         

@@ -26,6 +26,10 @@ sap.ui.define([
                         // Handle the error accordingly
                     }
                 });
+            },
+
+            getcurrentuser: function(){
+                sap.m.MessageToast.show(JSON.stringify(this.getOwnerComponent().getModel("userModel").getData()))
             }
         });
     });
