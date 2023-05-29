@@ -1,7 +1,7 @@
 <mvc:View controllerName="info.user.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m" xmlns:code="sap.ui.codeeditor">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="My INFO">
         <content>
         <code:CodeEditor id="codeeditor"
 		type="json"
